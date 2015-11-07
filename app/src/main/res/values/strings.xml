@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">nideyoyo</string>
+    <string name="dummy_button">QQ登录</string>
+    <string name="dummy_content">你有\n就有</string>
+    <string name="title_activity_main">nideyoyo</string>
+    <string name="action_settings">注销</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>
