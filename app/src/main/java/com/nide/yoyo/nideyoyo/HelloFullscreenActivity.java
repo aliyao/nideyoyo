@@ -2,24 +2,23 @@ package com.nide.yoyo.nideyoyo;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 
-import com.nide.yoyo.nideyoyo.tools.ACache;
 import com.nide.yoyo.nideyoyo.tools.ACacheUtil;
 import com.nide.yoyo.nideyoyo.tools.MyLog;
+import com.tencent.connect.common.Constants;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
 
 import org.json.JSONObject;
-import com.tencent.connect.common.Constants;
 
 public class HelloFullscreenActivity extends AppCompatActivity {
     private static final boolean AUTO_HIDE = true;
@@ -50,6 +49,10 @@ public class HelloFullscreenActivity extends AppCompatActivity {
         }else{
             handler.sendEmptyMessageDelayed(2, 2000);
         }
+      /*  //透明状态栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        //透明导航栏
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);*/
 
     }
 
@@ -92,7 +95,7 @@ public class HelloFullscreenActivity extends AppCompatActivity {
         public void onComplete(Object response) {
             super.onComplete(response);
            // loginInToMainActivity();
-
+            handler.sendEmptyMessageDelayed(1, 0);
         }
 
         @Override
